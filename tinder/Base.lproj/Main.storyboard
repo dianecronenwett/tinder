@@ -4,21 +4,82 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cards View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="tinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="CardsViewController" customModule="tinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timandtina" id="M4l-0O-eLy">
+                                <rect key="frame" x="37" y="37" width="246" height="246"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Fbl-nz-b8G" appends="YES" id="QSs-tY-t1s"/>
+                                    <outletCollection property="gestureRecognizers" destination="ymg-hm-OV2" appends="YES" id="9o8-Ya-F9T"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="cardImage" destination="M4l-0O-eLy" id="CLA-1Q-URe"/>
+                        <segue destination="iV4-Ty-r0p" kind="modal" identifier="profileSegue" id="vua-Fv-qdm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Fbl-nz-b8G">
+                    <connections>
+                        <action selector="onDrag:" destination="vXZ-lx-hvc" id="xWi-ex-8S5"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="ymg-hm-OV2">
+                    <connections>
+                        <action selector="onCardImageTap:" destination="vXZ-lx-hvc" id="DgZ-hy-vvz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="181.33333333333334" y="361.62666666666667"/>
+            <point key="canvasLocation" x="181" y="361"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="EVQ-hC-PKB">
+            <objects>
+                <viewController id="iV4-Ty-r0p" customClass="ProfileViewController" customModule="tinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fiZ-Gg-njc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CfR-vu-3ox">
+                                <rect key="frame" x="239" y="6" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDoneButton:" destination="iV4-Ty-r0p" eventType="touchUpInside" id="NEM-dz-6JY"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="QOd-np-7Dq">
+                                <rect key="frame" x="7" y="149" width="306" height="242"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="profileImage" destination="QOd-np-7Dq" id="fIN-TL-X5M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ii8-Wy-U0z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="361"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="timandtina" width="306" height="242"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

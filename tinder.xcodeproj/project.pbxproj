@@ -13,6 +13,8 @@
 		E4640F341A03121900ACC9E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4640F331A03121900ACC9E8 /* Images.xcassets */; };
 		E4640F371A03121900ACC9E8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4640F351A03121900ACC9E8 /* LaunchScreen.xib */; };
 		E4640F431A03121900ACC9E8 /* tinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4640F421A03121900ACC9E8 /* tinderTests.swift */; };
+		E4640F4D1A0312C200ACC9E8 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4640F4C1A0312C200ACC9E8 /* CardsViewController.swift */; };
+		E4640F4F1A03210E00ACC9E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4640F4E1A03210E00ACC9E8 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		E4640F3C1A03121900ACC9E8 /* tinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4640F411A03121900ACC9E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4640F421A03121900ACC9E8 /* tinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tinderTests.swift; sourceTree = "<group>"; };
+		E4640F4C1A0312C200ACC9E8 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		E4640F4E1A03210E00ACC9E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				E4640F2C1A03121900ACC9E8 /* AppDelegate.swift */,
 				E4640F2E1A03121900ACC9E8 /* ViewController.swift */,
 				E4640F301A03121900ACC9E8 /* Main.storyboard */,
+				E4640F4E1A03210E00ACC9E8 /* ProfileViewController.swift */,
+				E4640F4C1A0312C200ACC9E8 /* CardsViewController.swift */,
 				E4640F331A03121900ACC9E8 /* Images.xcassets */,
 				E4640F351A03121900ACC9E8 /* LaunchScreen.xib */,
 				E4640F2A1A03121900ACC9E8 /* Supporting Files */,
@@ -214,6 +220,8 @@
 			files = (
 				E4640F2F1A03121900ACC9E8 /* ViewController.swift in Sources */,
 				E4640F2D1A03121900ACC9E8 /* AppDelegate.swift in Sources */,
+				E4640F4F1A03210E00ACC9E8 /* ProfileViewController.swift in Sources */,
+				E4640F4D1A0312C200ACC9E8 /* CardsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
